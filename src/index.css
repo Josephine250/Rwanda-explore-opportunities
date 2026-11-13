@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* One palette for the whole app: indigo (brand), orange (accent), emerald (success). */
+@theme {
+  --font-sans: "Schibsted Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-ink: #1e1b3a;
+  --color-muted: #52546a;
+  --color-paper: #f7f8fc;
+  --color-line: #dcdfec;
+
+  --color-brand: #4338ca;
+  --color-brand-dark: #312e81;
+  --color-brand-soft: #e4e8ff;
+
+  --color-accent: #f97316;
+  --color-accent-soft: #ffedd5;
+
+  --color-success: #047857;
+  --color-success-soft: #d1fae5;
+
+  --color-danger: #b3261e;
+  --color-danger-soft: #fbe3e1;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  /* Visible keyboard focus on every interactive element */
+  :focus-visible {
+    outline: 3px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+}
